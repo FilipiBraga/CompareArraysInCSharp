@@ -10,7 +10,7 @@ namespace Tests
         private static readonly ArrayComparer _arrayComparer = new();
         private static readonly int[] _firstArray = new int[] { 10, 9, 3, 8, 7 };
         private static readonly int[] _secondArray = new int[] { 10, 9, 3, 8, 7 };
-
+        
         [TestMethod]
         public void GivenTheClassProgram_WhenExecuteTheMainMethod_ThenSetTheOutPutResultToOne()
         {
@@ -63,6 +63,22 @@ namespace Tests
         public void GivenTwoEqualDataArrays_WhenCompareThemUsingEnumerableSequenceEqualMethod_ThenReturnTrue()
         {
             var result = _arrayComparer.EnumerableSequenceEqual(_firstArray, _secondArray);
+
+            Assert.IsTrue(result);
+        }
+
+        [TestMethod]
+        public void GivenTwoEqualDataArraysOfArticle_WhenCompareThemUsingEnumerableSequeceEqualMethod_ThenReturnTrue()
+        {
+            var firstArticle = new Article() { Title = "How to Deserialize a Complex JSON Object in C# .NET", LastUpdate = new DateTime(2022, 03, 18) };
+            var similarFirstArticle = new Article() { Title = "How to Deserialize a Complex JSON Object in C# .NET", LastUpdate = new DateTime(2022, 03, 18) };
+            var secondArticle = new Article() { Title = "How to Populate an Array With the Same Value in C#", LastUpdate = new DateTime(2022, 02, 19) };
+            var similarSecondArticle = new Article() { Title = "How to Populate an Array With the Same Value in C#", LastUpdate = new DateTime(2022, 02, 19) };
+
+            var firstArray = new Article[] { firstArticle, secondArticle };
+            var secondArray = new Article[] { similarFirstArticle, similarSecondArticle };
+
+            var result = _arrayComparer.EnumerableSequenceEqual(firstArray, secondArray);
 
             Assert.IsTrue(result);
         }

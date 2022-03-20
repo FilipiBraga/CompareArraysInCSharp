@@ -8,7 +8,7 @@ namespace CompareArrays
         {
             return firstArray == secondArray;
         }
- 
+
         public bool ForLoop(int[] firstArray, int[] secondArray)
         {
             if (firstArray.Length != secondArray.Length)
@@ -28,6 +28,11 @@ namespace CompareArrays
             return Enumerable.SequenceEqual(firstArray, secondArray);
         }
 
+        public bool EnumerableSequenceEqual(Article[] firstArray, Article[] secondArray)
+        {
+            return Enumerable.SequenceEqual(firstArray, secondArray, new Article());
+        }
+
         public bool EnumerableEquals(int[] firstArray, int[] secondArray)
         {
             return Enumerable.Equals(firstArray, secondArray);
@@ -41,7 +46,7 @@ namespace CompareArrays
         public bool StructuralEquatable(int[] firstArray, int[] secondArray)
         {
             IStructuralEquatable structuralEquatable = firstArray;
-
+            
             return structuralEquatable.Equals(secondArray, StructuralComparisons.StructuralEqualityComparer);
         }
     }
