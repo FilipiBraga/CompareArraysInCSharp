@@ -37,13 +37,7 @@ namespace BenchmarkRunner
         public void ForLoop()
         {
             _arrayComparer.ForLoop(_firstArray, _secondArray);
-        }
-
-        [Benchmark]
-        public void ForeachLoop()
-        {
-            _arrayComparer.ForeachLoop(_firstArray, _secondArray);
-        }
+        }        
 
         [Benchmark]
         public void EnumerableSequenceEqual()

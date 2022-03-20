@@ -22,12 +22,7 @@
             Console.WriteLine("---------- Compare using For Loop");
             Console.WriteLine($"Are equal: {_arrayComparer.ForLoop(_firstArray, _secondArray)}");
 
-            Console.WriteLine();
-
-            Console.WriteLine("---------- Compare using Forach Loop");
-            Console.WriteLine($"Are equal: {_arrayComparer.ForeachLoop(_firstArray, _secondArray)}");
-
-            Console.WriteLine();
+            Console.WriteLine();           
 
             Console.WriteLine("---------- Compare using Enumerable.SequenceEqual");
             Console.WriteLine($"Are equal: {_arrayComparer.EnumerableSequenceEqual(_firstArray, _secondArray)}");

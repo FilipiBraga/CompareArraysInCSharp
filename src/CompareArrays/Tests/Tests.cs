@@ -60,30 +60,6 @@ namespace Tests
         }
 
         [TestMethod]
-        public void GivenTwoEqualDataArrays_WhenCompareThemUsingForeachLoopMethod_ThenReturnTrue()
-        {
-            var result = _arrayComparer.ForeachLoop(_firstArray, _secondArray);
-
-            Assert.IsTrue(result);
-        }
-
-        [TestMethod]
-        public void GivenTwoArrays_WhenCompareThemUsingForeachLoopMethodAndTheArraysSizeAreDifferent_ThenReturnFalse()
-        {
-            var result = _arrayComparer.ForeachLoop(_firstArray, new int[1]);
-
-            Assert.IsFalse(result);
-        }
-
-        [TestMethod]
-        public void GivenTwoDifferentDataArrays_WhenCompareThemUsingForeachLoopMethod_ThenReturnFalse()
-        {
-            var result = _arrayComparer.ForeachLoop(_firstArray, new int[5] { 2, 3, 4, 5, 7 });
-
-            Assert.IsFalse(result);
-        }
-
-        [TestMethod]
         public void GivenTwoEqualDataArrays_WhenCompareThemUsingEnumerableSequenceEqualMethod_ThenReturnTrue()
         {
             var result = _arrayComparer.EnumerableSequenceEqual(_firstArray, _secondArray);

@@ -23,23 +23,6 @@ namespace CompareArrays
             return true;
         }
 
-        public bool ForeachLoop(int[] firstArray, int[] secondArray)
-        {
-            if (firstArray.Length != secondArray.Length)
-                return false;
-
-            var index = 0;
-            foreach (var item in firstArray)
-            {
-                if (item != secondArray[index])
-                    return false;
-
-                index++;
-            }
-
-            return true;
-        }
-
         public bool EnumerableSequenceEqual(int[] firstArray, int[] secondArray)
         {
             return Enumerable.SequenceEqual(firstArray, secondArray);
