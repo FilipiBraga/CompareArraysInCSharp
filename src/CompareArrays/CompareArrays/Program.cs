@@ -19,11 +19,6 @@
 
             Console.WriteLine();
 
-            Console.WriteLine("---------- Compare using String.Join");
-            Console.WriteLine($"Are equal: {_arrayComparer.StringJoin(_firstArray, _secondArray)}");
-
-            Console.WriteLine();
-
             Console.WriteLine("---------- Compare using For Loop");
             Console.WriteLine($"Are equal: {_arrayComparer.ForLoop(_firstArray, _secondArray)}");
 

@@ -36,14 +36,6 @@ namespace Tests
         }
 
         [TestMethod]
-        public void GivenTwoEqualDataArrays_WhenCompareThemUsingStringJoinMethod_ThenReturnTrue()
-        {
-            var result = _arrayComparer.StringJoin(_firstArray, _secondArray);
-
-            Assert.IsTrue(result);
-        }
-
-        [TestMethod]
         public void GivenTwoEqualDataArrays_WhenCompareThemUsingForLoopMethodAnd_ThenReturnTrue()
         {
             var result = _arrayComparer.ForLoop(_firstArray, _secondArray);

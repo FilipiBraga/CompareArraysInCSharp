@@ -32,13 +32,7 @@ namespace BenchmarkRunner
         {
             _arrayComparer.EqualityOperator(_firstArray, _secondArray);
         }
-
-        [Benchmark]
-        public void StringJoin()
-        {
-            _arrayComparer.StringJoin(_firstArray, _secondArray);
-        }
-
+        
         [Benchmark]
         public void ForLoop()
         {

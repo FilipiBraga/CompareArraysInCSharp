@@ -8,12 +8,7 @@ namespace CompareArrays
         {
             return firstArray == secondArray;
         }
-
-        public bool StringJoin(int[] firstArray, int[] secondArray)
-        {
-            return string.Join("=>", firstArray) == string.Join("=>", secondArray);
-        }
-
+ 
         public bool ForLoop(int[] firstArray, int[] secondArray)
         {
             if (firstArray.Length != secondArray.Length)
