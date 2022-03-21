@@ -6,8 +6,8 @@ namespace BenchmarkRunner
     public class ArrayComparerBenchmark
     {
         private static readonly ArrayComparer _arrayComparer = new();
-        private static int[] _firstArray = new int[] { };
-        private static int[] _secondArray = new int[] { };
+        private static int[] _firstArray;
+        private static int[] _secondArray;
 
         public ArrayComparerBenchmark()
         {
